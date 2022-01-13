@@ -122,10 +122,12 @@ app.use("/api/users", userRoute)
 
 //app.use("/images", express.static(path.join(__dirname, "/images")))  //makes the images folder public
 
-app.use(express.static(path.join(__dirname, '/client/build'))) 
+//app.use(express.static(path.join(__dirname, '/client/build'))) 
+app.use(express.static(path.join(__dirname, '/client/build'))) //adjusted for heroku
 
 app.get('*', (req, res) => {  
-        res.sendFile(path.join(__dirname, '/client', 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, 'index.html'))  //adusted for docker in heroku
+    // res.sendFile(path.join(__dirname, '/client', 'build', 'index.html'))
 })
 
 //app.use(cors())
