@@ -3,7 +3,7 @@ import axios from 'axios'
 export const axiosInstance = axios.create({
     //baseURL: "http://localhost:3000"      
     //baseURL: "https://expansivedesigns.com/exdblog/api/"   
-    baseURL: "https://exdblog.herokuapp.com/api/"          //only use /api in heroku
+    baseURL: "https://exdblog-docker.herokuapp.com/api/"          //only use /api in heroku
 })
 
 //for axiosInstance - "/api" already included for auth, categories, posts, users per server.js
