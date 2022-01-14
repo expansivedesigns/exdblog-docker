@@ -131,7 +131,7 @@ app.use("/api/users", userRoute)
 //}
 
 app.get('*', (req, res) => {
-    const index = path.join(__dirname, 'build', 'index.html')
+    const index = path.join(__dirname, 'index.html')
     res.sendFile(index);
   })
 
