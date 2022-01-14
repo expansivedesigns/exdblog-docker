@@ -122,13 +122,14 @@ app.use("/api/users", userRoute)
 
 //app.use("/images", express.static(path.join(__dirname, "/images")))  //makes the images folder public
 // Server static assets if in production
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '/client/build'))) 
+//if (process.env.NODE_ENV === 'production') {
+
+    app.use(express.static(path.join(__dirname, '/client'))) 
 
     app.get('*', (req, res) => {  
-        res.sendFile(path.join(__dirname, '/client', 'build', 'index.html'))
+        res.sendFile(path.join(__dirname, '/client', 'index.html'))
     })    
-}
+//}
 
 
 //app.use(cors())
