@@ -102,7 +102,7 @@ app.get('*', (req,res) => {
 
 app.use(cors({
     credentials: true,  
-    origin: ['https://exdblog-docker.herokuapp.com/']    
+    origin: ['./']    
 }))  
 
 app.listen(process.env.PORT || 4000, () => console.log(`Server is up and running.`))
