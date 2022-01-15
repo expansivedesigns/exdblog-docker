@@ -123,18 +123,18 @@ app.use("/api/users", userRoute)
 //app.use("/images", express.static(path.join(__dirname, "/images")))  //makes the images folder public
 // Server static assets if in production
 // //if (process.env.NODE_ENV === 'production') {    
-//     app.use(express.static(path.join(__dirname, '/client/build'))) 
+    app.use(express.static(path.join(__dirname, '../client/build'))) 
 
-//     app.get('*', (req, res) => {  
-//         res.sendFile(path.join(__dirname, '/client', 'build', 'index.html'))
-//     })    
+    app.get('/*', (req, res) => {  
+        res.sendFile(path.join(__dirname, '../client/build', 'index.html'))
+    })    
 // //}
 
-app.use(express.static(path.join(__dirname, '/client/public'))) 
+// app.use(express.static(path.join(__dirname, '/client/public'))) 
 
-app.get('*', (req, res) => {  
-    res.sendFile(path.join(__dirname, '/client/public/index.html'))
-}) 
+// app.get('*', (req, res) => {  
+//     res.sendFile(path.join(__dirname, '/client/public/index.html'))
+// }) 
 
 // app.get('*', (req, res) => {
 //     const index = path.join(__dirname, '/client/public/index.html')
